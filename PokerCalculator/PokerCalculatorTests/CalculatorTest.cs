@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace PokerCalculator.Tests
+namespace PokerCalculatorTests
 {
     public class CalculatorTest
     {
