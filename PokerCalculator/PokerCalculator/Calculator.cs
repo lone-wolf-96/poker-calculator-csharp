@@ -7,6 +7,7 @@ namespace PokerCalculator
     public sealed class Calculator
     {
         public int[] Winners { get; }
+
         public int Games { get; private set; }
 
         public Calculator(string filePath)
@@ -80,11 +81,11 @@ namespace PokerCalculator
 
                 String handString2 = string.Join(" ", gameArray.Skip(n));
 
-                // Hand hand1 = new Hand(Hand.FromString(handString1));
+                Hand hand1 = new Hand(Hand.FromString(handString1));
 
-                // Hand hand2 = new Hand(Hand.FromString(handString2));
+                Hand hand2 = new Hand(Hand.FromString(handString2));
 
-                // Winners[CheckWinner(hand1, hand2)]++;
+                Winners[CheckWinner(hand1, hand2)]++;
             }
         }
 
@@ -106,7 +107,14 @@ namespace PokerCalculator
             }
         }
 
-        private int checkWinnerHelper(int num1, int num2)
+        private int CheckWinner(Hand hand1, Hand hand2)
+        {
+            int winners = CheckWinnerHelper((int)hand1.HandRank, (int)hand2.HandRank);
+
+            return winners != 2 ? winners : -100/* BreakTie(hand1, hand2) */;
+        }
+
+        private int CheckWinnerHelper(int num1, int num2)
         {
             int resultComparer = num1.CompareTo(num2);
 

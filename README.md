@@ -32,7 +32,7 @@ Unit tests are included.
 
 .Net Core CLI can only run .csproj files if it's in the same folder, or with the --project param indicating the location. For example:
 
-`dotnet run --project ./[folder-name]/[file-name].csproj`
+`dotnet run --project ./[solution-name]/[project-name]/[file-name].csproj`
 
 Otherwise it'll raise an error. By the way, this project requires to be run from the root directory.
 

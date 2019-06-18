@@ -3,10 +3,10 @@ using Xunit;
 
 namespace PokerCalculatorTests
 {
-    public class CalculatorTest
+    public class CardTest
     {
         [Fact]
-        public void TestCalculator()
+        public void TestCard()
         {
 
         }
