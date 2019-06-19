@@ -12,13 +12,13 @@ namespace PokerCalculator
 
                 String nextLine = Console.ReadLine().Trim();
 
-                String sourcePath = GetFolder(nextLine, "pokerdata.txt");
+                String sourcePath = GetFolder(nextLine) + "pokerdata.txt";
 
-                Console.WriteLine("Enter the poker_results.txt target directory (Press Enter for default):");
+                Console.WriteLine("Enter the target directory (Press Enter for default):");
 
                 nextLine = Console.ReadLine().Trim();
 
-                String targetPath = GetFolder(nextLine, "poker_results.txt");
+                String targetPath = GetFolder(nextLine);
 
                 if (new Calculator(sourcePath).PrintResults(targetPath))
                 {
@@ -37,9 +37,14 @@ namespace PokerCalculator
             }
         }
 
-        private static string GetFolder(string line, string fileName)
+        private static string GetFolder(string line)
         {
-            return ((line.Length > 0) ? line : System.IO.Directory.GetCurrentDirectory()) + "\\" + fileName;
+            if (line.Length > 0)
+            {
+                return line + (line[line.Length - 1] == '\\' ? "" : "\\");
+            }
+
+            return System.IO.Directory.GetCurrentDirectory() + "\\";
         }
     }
 }

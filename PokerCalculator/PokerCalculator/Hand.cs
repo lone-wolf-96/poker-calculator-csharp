@@ -96,9 +96,9 @@ namespace PokerCalculator
         {
             rankNumbers = Utility.ReplaceAceForOneIf(rankNumbers);
 
-            int[] sequentialRanks = Enumerable.Range(rankNumbers[0], rankNumbers[0] + HandSize).ToArray();
+            int[] sequentialRanks = Enumerable.Range(rankNumbers[0], HandSize).ToArray();
 
-            return System.Array.Equals(sequentialRanks, rankNumbers);
+            return Enumerable.SequenceEqual(sequentialRanks, rankNumbers);
         }
 
         private bool IsRoyal(Card[] cardsInHand)
@@ -119,7 +119,7 @@ namespace PokerCalculator
         {
             string[] cardNames = Cards.Select(card => card.ToString()).ToArray();
 
-            return string.Join("\n", cardNames);
+            return string.Join(" ", cardNames);
         }
     }
 }

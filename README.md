@@ -30,11 +30,25 @@ Unit tests are included.
 
 ### Bear-in-mind
 
+About generating launch.json file: [Get started with C# and Visual Studio Code](https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code#faq).
+
+As Visual Studio Code Output Console cannot receive inputs, it's necessary you add this to the generated launch.json file to use the Integrated Terminal:
+
+```json
+"console": "integratedTerminal"
+```
+
 .Net Core CLI can only run .csproj files if it's in the same folder, or with the --project param indicating the location. For example:
 
 `dotnet run --project ./[solution-name]/[project-name]/[file-name].csproj`
 
-Otherwise it'll raise an error. By the way, this project requires to be run from the root directory.
+Otherwise it'll raise an error. By the way, this project requires to be run from the root directory. This may be a problem while debugging.
+
+This extension could help for testing: [.NET Core Test Explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer). This should be added to settings.json file.
+
+```json
+"dotnet-test-explorer.testProjectPath": "[solution-name]/[test-project-name]/[file-name].csproj"
+```
 
 ## Authors
 
