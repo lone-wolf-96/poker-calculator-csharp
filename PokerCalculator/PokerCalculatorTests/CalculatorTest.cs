@@ -7,7 +7,9 @@ namespace PokerCalculatorTests
     public class CalculatorTest
     {
         // Try your own current directory
-        private readonly String FilePathSource = System.IO.Directory.GetCurrentDirectory() + "\\" + "pokerdata.txt";
+        private static readonly String FilePathSource = System.IO.Directory.GetCurrentDirectory() + "\\" + "pokerdata.txt";
+
+        private static readonly Calculator Calculator = new Calculator(FilePathSource);
 
         [Fact]
         public void TestCalculator()
@@ -19,14 +21,14 @@ namespace PokerCalculatorTests
         [InlineData(new int[] { 376, 624, 0 })]
         public void TestGetWinners(int[] winners)
         {
-            Assert.Equal(winners, new Calculator(FilePathSource).Winners);
+            Assert.Equal(winners, Calculator.Winners);
         }
 
         [Theory]
         [InlineData(1000)]
         public void TestGetGames(int games)
         {
-            Assert.Equal(games, new Calculator(FilePathSource).Games);
+            Assert.Equal(games, Calculator.Games);
         }
 
         [Fact]
@@ -34,14 +36,14 @@ namespace PokerCalculatorTests
         {
             String filePathTarget = System.IO.Directory.GetCurrentDirectory() + "\\";
 
-            Assert.True(new Calculator(FilePathSource).PrintResults(filePathTarget));
+            Assert.True(Calculator.PrintResults(filePathTarget));
         }
 
         [Theory]
         [InlineData("Total Games: 1000\nPlayer 1: 376\nPlayer 2: 624\nTie: 0")]
         public void TestToString(string toString)
         {
-            Assert.Equal(toString, new Calculator(FilePathSource).ToString());
+            Assert.Equal(toString, Calculator.ToString());
         }
     }
 }

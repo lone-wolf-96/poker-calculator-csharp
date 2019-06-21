@@ -9,6 +9,7 @@ namespace PokerCalculatorTests
         [InlineData(Rank.JACK, Suit.SPADES)]
         [InlineData(Rank.ACE, Suit.DIAMONDS)]
         [InlineData(Rank.KING, Suit.CLUBS)]
+        [InlineData(Rank.QUEEN, Suit.HEARTS)]
         public void TestCard(Rank rank, Suit suit)
         {
             new Card(rank, suit);
