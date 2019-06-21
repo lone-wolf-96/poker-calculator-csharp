@@ -24,7 +24,7 @@ It requires no other installation than having .NET Core SDK latest stable releas
 
 ### Usage
 
-The process is simple, once is run, it will ask for the pokerdata.txt source directory and then, for the poker_results.txt target directory (pokerdata.txt was added as an example for file format).
+The process is simple, once is run, it will ask for the pokerdata.txt source directory and then, for the target directory (pokerdata.txt was added as an example for file format).
 
 Unit tests are included.
 
