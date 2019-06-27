@@ -141,15 +141,11 @@ namespace PokerCalculator
                 return 2;
             }
 
-            var cardsInHand1 = hand1.Cards;
-
-            var cardsInHand2 = hand2.Cards;
-
-            int[] rankNumbers1 = cardsInHand1.Select(card => card.Rank.GetRankNumber()).ToArray();
+            int[] rankNumbers1 = hand1.Cards.Select(card => card.Rank.GetRankNumber()).ToArray();
 
             Array.Sort(rankNumbers1);
 
-            int[] rankNumbers2 = cardsInHand2.Select(card => card.Rank.GetRankNumber()).ToArray();
+            int[] rankNumbers2 = hand2.Cards.Select(card => card.Rank.GetRankNumber()).ToArray();
 
             Array.Sort(rankNumbers2);
 
