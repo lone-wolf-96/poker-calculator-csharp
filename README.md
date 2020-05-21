@@ -1,11 +1,11 @@
-# [Poker Calculator in C#](https://github.com/lone-wolf-96/poker-calculator-csharp/)
+# [Poker Calculator in C#](https://github.com/mr-wolf-rsh/poker-calculator-csharp/)
 
 Demo that 'calculates' the winning poker hand between 2 players through algorithms.
 This is the C# version of:
 
-* [Poker Calculator in Java](https://github.com/lone-wolf-96/poker-calculator-java/)
-* [Poker Calculator in Python](https://github.com/lone-wolf-96/poker-calculator-python/)
-* [Poker Calculator in JavaScript](https://github.com/lone-wolf-96/poker-calculator-js/)
+* [Poker Calculator in Java](https://github.com/mr-wolf-rsh/poker-calculator-java/)
+* [Poker Calculator in Python](https://github.com/mr-wolf-rsh/poker-calculator-python/)
+* [Poker Calculator in JavaScript](https://github.com/mr-wolf-rsh/poker-calculator-js/)
 
 ## Getting Started
 
@@ -52,7 +52,7 @@ This extension could help for testing: [.NET Core Test Explorer](https://marketp
 
 ## Authors
 
-* **LoneWolf96** - *Final work* - [lone-wolf-96](https://github.com/lone-wolf-96/)
+* **Renzo S.** - *Final work* - [mr-wolf-rsh](https://github.com/mr-wolf-rsh/)
 
 ## Contributing
 
